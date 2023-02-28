@@ -120,5 +120,73 @@ let new_value = plus_one(1);
 
 println!("{}", new_value);
 
+// if expressions
+let sunday = true;
+
+if sunday {
+  println!("I going to the beach")
+} else {
+  println!("no way!")
+}
+
+// loop expessions
+let mut counter = 0;
+let result = loop {
+  counter += 1;
+
+  if counter == 10 {
+    break counter * 2;
+  }
+};
+
+println!("the result is: {}", result);
+
+let mut count = 0;
+  'counting_up: loop {
+    println!("count = {count}");
+      let mut remaining = 10;
+
+      loop {
+        println!("remaining = {remaining}");
+          if remaining == 9 {
+              break;
+          }
+          if count == 2 {
+              break 'counting_up;
+          }
+        remaining -= 1;
+      }
+    count += 1;
+  }
+println!("End count = {count}");
+
+let mut test = 3;
+while test != 0 {
+  println!("{}", test);
+  test -= 1;
+}
+
+let collect = ["a", "b", "c", "d", "e", "f", "g"];
+let mut i = 0;
+
+while i < collect.len() {
+  println!("{}", collect[i]);
+  i += 1;
+}
+
+println!();
+
+for num_collect in (1..4).rev(){
+  println!("{}", num_collect);
+}
+
+println!();
+
+for num_collect in 1..4{
+  println!("{}", num_collect);
+}
+
+
+
 
 }
